@@ -1,6 +1,6 @@
 var Count = 4; // Кол-во запросов.
 
-
+iimPlayCode('FILEDELETE NAME=C:\\ParseMail\\log.txt');
 for (lines = 1; lines<=Count; lines++)
 {
 iimPlayCode('TAB CLOSEALLOTHERS');
@@ -33,30 +33,33 @@ for (k = 0; k<=c.length-(c.length/2 + 15); k++)
 {
   d+=c[k].replace('"','');
 }
-   iimPlayCode('URL GOTO='+d);
-
-   var d = window.document.getElementsByTagName('body');
-  
+  iimPlayCode('URL GOTO='+d);
+  var d = window.document.getElementsByTagName('body');
   var siteText = '';
-
   for (var i = 0; i < d.length; i++) {
+   siteText+=d[i].innerHTML;} 
 
-    siteText+=d[i].innerHTML;
-
-}
-
+var href = '';
+var kaz = siteText.match(/href=".*?"/g).join('').split('href=');
+for (z = 1; z<=kaz.length-1; z++){
+ var href = kaz[z].replace(/"/g,'');
+ if (!/^\//.test(href)) continue;
+ else
+ iimPlayCode('TAB OPEN\nTAB T=2'); 
+ iimPlayCode('URL GOTO=http://'+site+href);
+ var d = window.document.getElementsByTagName('body');
+ var siteText = '';
+ for (var i = 0; i < d.length; i++) {
+    siteText+=d[i].innerHTML;} 
   if (/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(siteText))
-  {
-    
-    emal=siteText.match(/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/g);
+  { emal=siteText.match(/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/g);
     iimPlayCode('SET !ERRORIGNORE YES\nSET !TIMEOUT_STEP 0\nSET !VAR2 '+emal+':'+site+'\nADD !EXTRACT {{!VAR2}}\nSAVEAS TYPE=EXTRACT FOLDER=C:\\ParseMail\\ FILE=log.txt'); 
-        iimPlayCode('BACK');
-        plusOne++;
-
-
-  }
-  else
-    iimPlayCode('BACK');
+    plusOne++; 
+    iimPlayCode('TAB CLOSE');}
+  else{
+  iimPlayCode('TAB CLOSE');
+  continue;}}
+  iimPlayCode('BACK');
        plusOne++;
 
   if (j == 10)
