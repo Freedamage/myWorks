@@ -1,3 +1,5 @@
+var start = 2; 
+
 for (i = 1; i <= 250; i++){
 var seconds = window.document.getElementsByClassName("timer")[0].getElementsByClassName("time-left")[0].innerHTML;	          
 if (seconds <= 1.5 && seconds >= 0.1){
@@ -17,19 +19,19 @@ if (seconds <= 1.5 && seconds >= 0.1){
       var sum2 = window.document.getElementsByClassName("odometer-value")[9].innerHTML;
       var sum = sum0+sum1+sum2;
        
-        if (red > black && green*5 > black){
+        if (red > black + 15000 && green*5 > black){
         try {
            window.document.getElementsByClassName("amount")[0].getElementsByTagName("input")[0].value=betOn;
            }catch(ex){
-                      window.document.getElementsByClassName("amount")[0].getElementsByTagName("input")[0].value=2;
+                      window.document.getElementsByClassName("amount")[0].getElementsByTagName("input")[0].value=start;
            }
            window.document.getElementsByClassName("header-button black")[0].click();
         }
-        else if (black > red && green*5 > red){
+        else if (black > red + 15000 && green*5 > red){
         try {
            window.document.getElementsByClassName("amount")[0].getElementsByTagName("input")[0].value=betOn;
            }catch(ex){
-                      window.document.getElementsByClassName("amount")[0].getElementsByTagName("input")[0].value=2;
+                      window.document.getElementsByClassName("amount")[0].getElementsByTagName("input")[0].value=start;
            }
            window.document.getElementsByClassName("header-button red")[0].click();               
         } 
@@ -42,12 +44,12 @@ if (seconds <= 1.5 && seconds >= 0.1){
            try{
              betOn = betOn*2;
                }catch(ex){
-               betOn = 2;
+               betOn = start;
                betOn = betOn*2;
                }
            }
 	    else{
-             betOn = 2;
+             betOn = start;
 		}
 		iimDisplay('Was money a bet ago: '+sum+'\nMoney after bet is: '+balance+'\nCurrent bet is: '+betOn);
 		
