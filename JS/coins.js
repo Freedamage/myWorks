@@ -33,7 +33,7 @@ if (seconds <= 1.5 && seconds >= 0.1){
            }
            window.document.getElementsByClassName("header-button red")[0].click();               
         } 
-           iimPlayCode("WAIT SECONDS=15");
+           iimPlayCode("WAIT SECONDS=17");
            var balance0 = window.document.getElementsByClassName("odometer-value")[7].innerHTML;
            var balance1 = window.document.getElementsByClassName("odometer-value")[8].innerHTML;
            var balance2 = window.document.getElementsByClassName("odometer-value")[9].innerHTML;
