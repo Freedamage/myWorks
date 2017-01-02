@@ -49,6 +49,7 @@ if (seconds <= 1.5 && seconds >= 0.1){
 	    else{
              betOn = 2;
 		}
+		iimDisplay('Was money a bet ago: '+sum+'\nMoney after bet is: '+balance+'\nCurrent bet is: '+betOn);
 		
  }
 iimPlayCode("WAIT SECONDS=1");
