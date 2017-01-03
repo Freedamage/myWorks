@@ -1,4 +1,6 @@
 var start = 2; 
+var start = 1; 
+var maxbet = start;
 
 for (i = 1; i <= 250; i++){
 var seconds = window.document.getElementsByClassName("rolling")[0].getElementsByTagName("span")[0].innerHTML;
@@ -14,6 +16,7 @@ if (seconds <= 2 && seconds >= 0.1){
       var green = parseInt(green);
       
       var sum = window.document.getElementsByClassName("value")[0].innerHTML;
+      var sum = parseInt(sum);
        
         if (red > black){
         try {
@@ -31,8 +34,9 @@ if (seconds <= 2 && seconds >= 0.1){
            }
            window.document.getElementsByClassName("red-bet-button bet-button")[0].click();              
         } 
-           iimPlayCode("WAIT SECONDS=17");
+           iimPlayCode("WAIT SECONDS=23");
            var balance = window.document.getElementsByClassName("value")[0].innerHTML;
+           var balance = parseInt(balance);
            if (balance < sum){
            try{
              betOn = betOn*2;
@@ -44,8 +48,13 @@ if (seconds <= 2 && seconds >= 0.1){
 	    else{
              betOn = start;
 		}
-		iimDisplay('Was money a bet ago: '+sum+'\nMoney after bet is: '+balance+'\nCurrent bet is: '+betOn);
+		
+		if (betOn > maxbet)
+		                maxbet = betOn;
+
+		iimDisplay('Was money a bet ago: '+sum+'\nMoney after bet is: '+balance+'\nCurrent bet is: '+betOn+'\n\nMax bet ever: '+maxbet);
 		
  }
 iimPlayCode("WAIT SECONDS=1");
 }
+
