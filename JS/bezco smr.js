@@ -180,7 +180,7 @@ iimPlayCode('TAG POS='+j+' TYPE=A ATTR=CLASS:title EXTRACT=HREF\nSAVEAS TYPE=EXT
 }
 
 var logSPB = 'SPB'; // Логин от Питера
-var pasSPB = 'Heu3fWcmr7Jz'; // Пароль 
+var pasSPB = 'СЕКРЕТИК'; // Пароль 
 iimPlayCode('URL GOTO=http://admin.bazavashdom.ru');
 iimPlayCode('SET !TIMEOUT_STEP 0\nTAG POS=1 TYPE=A ATTR=TXT:Выйти');
 iimPlayCode('WAIT SECONDS=4');
@@ -1000,7 +1000,7 @@ iimPlayCode('TAG POS='+j+' TYPE=A ATTR=CLASS:title EXTRACT=HREF\nSAVEAS TYPE=EXT
 }
 
 var logSPB = 'MSK'; // Логин от Москвы
-var pasSPB = 'Hwdi3nqu7Kdh'; // Пароль от Москвы
+var pasSPB = 'СЕКРЕТИКИ'; // Пароль от Москвы
 iimPlayCode('URL GOTO=http://admin.bazavashdom.ru');
 iimPlayCode('SET !TIMEOUT_STEP 0\nTAG POS=1 TYPE=A ATTR=TXT:Выйти');
 iimPlayCode('WAIT SECONDS=4');
