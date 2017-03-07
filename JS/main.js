@@ -1,6 +1,6 @@
-﻿var mail = 'artemont98@gmail.com';
+﻿var mail = 'artemont@gmail.com';
 var num = '0';
-var wallet =  'R425299709692';
+var wallet =  'R42529645899';
 var minsum = 50;
 
 
