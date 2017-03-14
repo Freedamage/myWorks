@@ -1,8 +1,9 @@
-﻿var mail = 'artemont@gmail.com';
+var mail = 'DASDA';
 var num = '0';
-var wallet =  'R42529645899';
+var wallet =  'R425299709692';
 var minsum = 50;
-
+var frstW = 7;
+var timeis = 5;
 
 
 function close (what){
@@ -56,13 +57,13 @@ for (var a = 1; a <= count; a++){
 				addTw = 'CODE:SET !ERRORIGNORE YES' + n;
 				addTw += 'SET !ERRORCONTINUE YES' + n;
 				addTw += 'SET !TIMEOUT_STEP 2' + n;
-				addTw += 'WAIT SECONDS=4' + n;
+				addTw += 'WAIT SECONDS=' + frstW + n;
 				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TITLE:Add<SP>to' + n;
 				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=ARIA-CHECKED:checked&&ROLE:menuitemcheckbox&&TITLE:Click<SP>to<SP>remove<SP>video<SP>from<SP>123&&ARIA-LABEL:Click<SP>to<SP>remove<SP>video<SP>from<SP>123<SP>Public<SP>playlist&&CLASS:playlist-status&&TXT:' + n;
  				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=ROLE:menuitemcheckbox&&ARIA-CHECKED:unchecked&&TITLE:Click<SP>to<SP>add<SP>video<SP>to<SP>123&&ARIA-LABEL:Click<SP>to<SP>add<SP>video<SP>to<SP>123<SP>Public<SP>playlist&&CLASS:playlist-status&&TXT:' + n;
-				addTw += 'WAIT SECONDS=1' + n;		
-                addTw += 'TAB CLOSE' + n;
-                addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Я<SP>выполнил<SP>задание' + n;	
+				addTw += 'WAIT SECONDS=' + timeis + n;		
+                		addTw += 'TAB CLOSE' + n;
+                		addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Я<SP>выполнил<SP>задание' + n;	
 				addTw += 'WAIT SECONDS=1' + n;		
 				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Ok' + n;
 				addTw += 'WAIT SECONDS=1';	
@@ -109,13 +110,14 @@ function doLikes (count){
 										
 				addTw = 'CODE:SET !ERRORIGNORE YES' + n;
 				addTw += 'SET !ERRORCONTINUE YES' + n;
-				addTw += 'WAIT SECONDS=4' + n;
+				addTw += 'WAIT SECONDS=' + frstW + n;
 				addTw += 'SET !TIMEOUT_STEP 0' + n;
-				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TITLE:Unlike' + n;
-				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TITLE:I<SP>like<SP>this' + n;
-				addTw += 'WAIT SECONDS=1' + n;		
-                addTw += 'TAB CLOSE' + n;
-                addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Я<SP>выполнил<SP>задание' + n;	
+ 				addTw += 'EVENT TYPE=CLICK SELECTOR="#watch8-sentiment-actions>SPAN>SPAN>BUTTON" BUTTON=0' + n;				
+				//addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TITLE:Unlike' + n;
+				//addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TITLE:I<SP>like<SP>this' + n;
+				addTw += 'WAIT SECONDS=' + timeis + n;		
+                		addTw += 'TAB CLOSE' + n;
+                		addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Я<SP>выполнил<SP>задание' + n;	
 				addTw += 'WAIT SECONDS=1' + n;		
 				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Ok' + n;
 				addTw += 'WAIT SECONDS=1';	
@@ -164,11 +166,11 @@ for (var c = 1; c <= count; c++){
 				
 				addTw = 'CODE:SET !ERRORIGNORE YES' + n;
 				addTw += 'SET !ERRORCONTINUE YES' + n;
-				addTw += 'WAIT SECONDS=4' + n;
+				addTw += 'WAIT SECONDS=' + frstW + n;
 				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TITLE:I<SP>dislike<SP>this' + n;
-				addTw += 'WAIT SECONDS=1' + n;		
-                addTw += 'TAB CLOSE' + n;
-                addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Я<SP>выполнил<SP>задание' + n;	
+				addTw += 'WAIT SECONDS=' + timeis + n;		
+               			addTw += 'TAB CLOSE' + n;
+                		addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Я<SP>выполнил<SP>задание' + n;	
 				addTw += 'WAIT SECONDS=1' + n;		
 				addTw += 'TAG POS=1 TYPE=BUTTON ATTR=TXT:Ok' + n;
 				addTw += 'WAIT SECONDS=1';		
