@@ -19,4 +19,6 @@ function getCaptcha(myKey){
 		 var capa = iimGetExtract();
 		 
 		 iimPlayCode('TAB CLOSE');
+	
+	return capa;
  }
