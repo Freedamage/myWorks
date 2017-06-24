@@ -1,32 +1,78 @@
-﻿var KeyApi = 'СЮДА_КЛЮЧ_ОТ_РУКАПЧИ'; // Сюда свой API ключ от рукапчи. https://rucaptcha.com/
-var KeyOfVk = 'КЛЮЧ_ОТ_САЙТА'; // Ключ от сайта.
-var site = 'epay.info'; // Сайт, на котором будет решаться каптча.
 
-function captcha () {
-iimPlayCode('TAB OPEN\nTAB T=2');
-iimPlayCode('URL GOTO=http://rucaptcha.com/in.php?key='+KeyApi+'&method=userrecaptcha&googlekey='+KeyOfVk+'&pageurl='+site);
-iimPlayCode('SET !TIMEOUT_STEP 0\nTAG POS=1 TYPE=* ATTR=TXT:* EXTRACT=TXT');  
-c=iimGetExtract().match(/\d+/g).join(''); 
-iimPlayCode('URL GOTO=http://rucaptcha.com/res.php?key='+KeyApi+'&action=get&id='+c);
-boola = true;
-while (boola == true)
-{
-if (iimPlayCode('SET !TIMEOUT_STEP 0\nTAG POS=1 TYPE=* ATTR=TXT:CAPCHA_NOT_READY') == true)
-	{iimPlayCode('REFRESH');}
-else 
-   {boola = false; break;}
-}
-iimPlayCode('SET !TIMEOUT_STEP 0\nTAG POS=1 TYPE=* ATTR=TXT:* EXTRACT=TXTALL');  
-z=iimGetExtract();
-zi = '';
-for (p = 3; p<=z.length-1; p++)
- zi+=z[p];
-iimPlayCode('TAB CLOSE');
-iimPlayCode('WAIT SECONDS=1\nTAG POS=1 TYPE=TEXTAREA FORM=ID:recaptcha-demo-form ATTR=ID:g-recaptcha-response CONTENT='+zi);
-}
-if (iimPlayCode('FRAME NAME="undefined"\nTAG POS=1 TYPE=DIV ATTR=TXT:Privacy<SP>-<SP>Terms') == true)
-{
-captcha();
-}
+ var myKey      = 'e396e9c8b7d4cbc36704164f50896038';  // Ключ от рукапчи.   
+ 
+ var n 		  = '\n';
+ var chk 	  = false; 
+ var sec      = 10;
+ var dataSite = '6LcGDBUUAAAAAGAgZ4smyZhciqOTQ3GH55XZhe-W';
+ var domen 	  = 'olx.ua';
+ var k        = '6LcGDBUUAAAAAGAgZ4smyZhciqOTQ3GH55XZhe-W';
 
+function captcha(myKey){
+	 
+	 var first;
+	  
+	  		var iimA  = 'CODE:' + n;
+				iimA += 'TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:index ATTR=NAME:submit' + n;
+				iimA += 'WAIT SECONDS =1';					
+				iimPlay(iimA, 60);
+		  
+			first  = 'CODE:SET !ERRORIGNORE YES' + n;
+            first += 'TAB OPEN' + n; 
+		    first += 'TAB T=2';
+          
+		iimPlay(first, 60);  
 
+		var linkA = 'URL GOTO=rucaptcha.com/in.php?key='+myKey+'&method=userrecaptcha&googlekey='+k+'&pageurl='+domen;
+		
+		iimPlayCode(linkA);
+
+		iimPlayCode('WAIT SECONDS=3');
+
+		ok = window.document.getElementsByTagName('body')[0].innerHTML;
+		ok = ok.split('|');
+
+		var linkB = 'URL GOTO=rucaptcha.com/res.php?key='+myKey+'&action=get&id='+ok[1];
+		
+		iimPlayCode(linkB);
+		
+		while (chk == false)	
+				chk = Split(sec);
+		
+			var third;
+			
+					third  = 'CODE:WAIT SECONDS=1' + n;
+					third += 'TAB CLOSE' + n; 
+					third += 'WAIT SECONDS=1';
+			
+				iimPlay(third, 60); 	
+				
+				iimPlayCode('TAG POS=1 TYPE=TEXTAREA FORM=ID:contact-form ATTR=ID:g-recaptcha-response CONTENT='+respon[1]);
+	 
+ }
+ 
+ function Split(sec){
+	 
+	  	var second;
+			
+					second  = 'CODE:WAIT SECONDS=' + sec + n;
+					second += 'REFRESH' + n; 
+					second += 'WAIT SECONDS=3';
+			
+				iimPlay(second, 60);           
+	
+		respon = window.document.getElementsByTagName('body')[0].innerHTML;
+		respon = respon.split('|');
+		
+	  if (/ERROR_CAPTCHA_UNSOLVABLE/.test(respon)){
+		iimPlayCode('TAB CLOSE');
+		captcha(myKey);
+	  }
+      else{	  
+      if (respon[1] == undefined) 
+			return false;
+		else
+			return true;
+	  }
+		
+  }	
