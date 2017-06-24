@@ -1,11 +1,11 @@
 
- var myKey      = 'e396e9c8b7d4cbc36704164f50896038';  // Ключ от рукапчи.   
+ var myKey      = '';  // Ключ от рукапчи.   
  
- var n 		  = '\n';
- var chk 	  = false; 
+ var n 	      = '\n';
+ var chk      = false; 
  var sec      = 10;
  var dataSite = '6LcGDBUUAAAAAGAgZ4smyZhciqOTQ3GH55XZhe-W';
- var domen 	  = 'olx.ua';
+ var domen    = 'olx.ua';
  var k        = '6LcGDBUUAAAAAGAgZ4smyZhciqOTQ3GH55XZhe-W';
 
 function captcha(myKey){
