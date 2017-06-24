@@ -12,14 +12,9 @@ function captcha(myKey){
 	 
 	 var first;
 	  
-	  		var iimA  = 'CODE:' + n;
-				iimA += 'TAG POS=1 TYPE=INPUT:SUBMIT FORM=ACTION:index ATTR=NAME:submit' + n;
-				iimA += 'WAIT SECONDS =1';					
-				iimPlay(iimA, 60);
-		  
-			first  = 'CODE:SET !ERRORIGNORE YES' + n;
-            first += 'TAB OPEN' + n; 
-		    first += 'TAB T=2';
+		first  = 'CODE:SET !ERRORIGNORE YES' + n;
+                first += 'TAB OPEN' + n; 
+		first += 'TAB T=2';
           
 		iimPlay(first, 60);  
 
