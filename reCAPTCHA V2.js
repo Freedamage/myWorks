@@ -1,12 +1,12 @@
 
- var myKey      = '';  // Ключ от рукапчи.   
+ var myKey      = '';  // API-Ключ от рукапчи.   
  
- var n 	      = '\n';
- var chk      = false; 
- var sec      = 10;
- var dataSite = '6LcGDBUUAAAAAGAgZ4smyZhciqOTQ3GH55XZhe-W';
- var domen    = 'olx.ua';
- var k        = '6LcGDBUUAAAAAGAgZ4smyZhciqOTQ3GH55XZhe-W';
+ var n 		= '\n';
+ var chk 	= false; 
+ var sec        = 10;
+ var dataSite   = '6LcU4gkTAAAAAM4SyYTmXlKvqwWLuaFLy-30rzBn';
+ var domen 	= 'textnow.com';
+ var k          = '6LcU4gkTAAAAAM4SyYTmXlKvqwWLuaFLy-30rzBn';
 
 function captcha(myKey){
 	 
@@ -38,6 +38,8 @@ function captcha(myKey){
 		
 		while (chk == false)	
 				chk = Split(sec);
+			
+			chk = false;
 		
 			var third;
 			
@@ -47,7 +49,7 @@ function captcha(myKey){
 			
 				iimPlay(third, 60); 	
 				
-				iimPlayCode('TAG POS=1 TYPE=TEXTAREA FORM=ID:contact-form ATTR=ID:g-recaptcha-response CONTENT='+respon[1]);
+				iimPlayCode('TAG POS=1 TYPE=TEXTAREA ATTR=ID:g-recaptcha-response CONTENT='+respon[1]);
 	 
  }
  
