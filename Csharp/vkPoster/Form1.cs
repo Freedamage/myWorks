@@ -95,31 +95,6 @@ namespace WindowsFormsApplication1
         bool prove;
         int ko = 0;
         int koko = 0;
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-
-            numericUpDown2.Value = trackBar1.Value;
-
-        }
-
-        private void numericUpDown2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if (numericUpDown2.Text.Length > 4 && Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
-
-        }
         
         
         bool secondVowelP;
