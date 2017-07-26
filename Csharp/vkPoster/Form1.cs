@@ -101,108 +101,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-            if (richTextBoxAccz.Visible == false)
-                richTextBoxAccz.Show();
-            else
-                richTextBoxAccz.Hide();
-            richTextBox2.Hide();
-            richTextBox3.Hide();
-            label1.Hide();
-            textBox1.Hide();
-            trackBar1.Hide();
-            label2.Hide();
-            numericUpDown2.Hide();
-            richTextBoxAccsz.Hide();
-            label4.Hide();
-            buttonDopOpt.Hide();
-            buttonSave.Hide();
-            numericUpDown1.Hide();
-            label3.Hide();
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-            if (richTextBox2.Visible == false)
-                richTextBox2.Show();
-            else
-                richTextBox2.Hide();
-            richTextBoxAccz.Hide();
-            richTextBox3.Hide();
-            label1.Hide();
-            textBox1.Hide();
-            trackBar1.Hide();
-            label2.Hide();
-            numericUpDown2.Hide();
-            richTextBoxAccsz.Hide();
-            label4.Hide();
-            buttonDopOpt.Hide();
-            buttonSave.Hide();
-            numericUpDown1.Hide();
-            label3.Hide();
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            if (numericUpDown1.Visible == false)
-                numericUpDown1.Show();
-            else
-                numericUpDown1.Hide();
-            if (label3.Visible == false)
-                label3.Show();
-            else
-                label3.Hide();
-            if (buttonDopOpt.Visible == false)
-                buttonDopOpt.Show();
-            else
-                buttonDopOpt.Hide();
-            if (buttonSave.Visible == false)
-                buttonSave.Show();
-            else
-                buttonSave.Hide();
-            if (label4.Visible == false)
-                label4.Show();
-            else
-                label4.Hide();
-            if (richTextBoxAccsz.Visible == false)
-                richTextBoxAccsz.Show();
-            else
-                richTextBoxAccsz.Hide();
-            if (numericUpDown2.Visible == false)
-                numericUpDown2.Show();
-            else
-                numericUpDown2.Hide();
-            if (trackBar1.Visible == false)
-                trackBar1.Show();
-            else
-                trackBar1.Hide();
-            if (label2.Visible == false)
-                label2.Show();
-            else
-                label2.Hide();
-            if (textBox1.Visible == false)
-                textBox1.Show();
-            else
-                textBox1.Hide();
-            if (label1.Visible == false)
-                label1.Show();
-            else
-                label1.Hide();
-            if (richTextBox3.Visible == false)
-                richTextBox3.Show();
-            else
-                richTextBox3.Hide();
-            richTextBoxAccz.Hide();
-            richTextBox2.Hide();
-
-        }
+        
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -221,47 +120,8 @@ namespace WindowsFormsApplication1
 
 
         }
-
-        private void buttonDopOpt_Click(object sender, EventArgs e)
-        {
-
-            buttonDopOpt.Hide();
-            buttonSave.Hide();
-            button1.Hide();
-            button2.Hide();
-            button3.Hide();
-            button4.Hide();
-            button5.Hide();
-            numericUpDown1.Hide();
-            label3.Hide();
-            label4.Show();
-            richTextBoxAccsz.Hide();
-            label1.Hide();
-            textBox1.Hide();
-            label2.Hide();
-            trackBar1.Hide();
-            label4.Hide();
-            numericUpDown2.Hide();
-
-            numericUpDown4.Show();
-            label9.Show();
-            label8.Show();
-            richTextBox1.Show();
-            numericUpDown3.Show();
-            checkBox2.Show();
-            label7.Show();
-            richTextBoxGroups.Show();
-            button6.Show();
-            checkBox1.Show();
-            label5.Show();
-            label6.Show();
-            richTextBoxText.Show();
-            richTextBox4.Show();
-            numericUpDownLoop.Show();
-            labelLoop.Show();
-
-        }
-
+        
+        
         bool secondVowelP;
         bool secondVowelM;
         bool firstIsVowel;
@@ -975,59 +835,7 @@ namespace WindowsFormsApplication1
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
-            {
-            
-                if (numericUpDown1.Visible == false)
-                    numericUpDown1.Show();
-                else
-                    numericUpDown1.Hide();
-                if (label3.Visible == false)
-                    label3.Show();
-                else
-                    label3.Hide();
-                if (buttonDopOpt.Visible == false)
-                    buttonDopOpt.Show();
-                else
-                    buttonDopOpt.Hide();
-                if (buttonSave.Visible == false)
-                    buttonSave.Show();
-                else
-                    buttonSave.Hide();
-                if (label4.Visible == false)
-                    label4.Show();
-                else
-                    label4.Hide();
-                if (richTextBoxAccsz.Visible == false)
-                    richTextBoxAccsz.Show();
-                else
-                    richTextBoxAccsz.Hide();
-                if (numericUpDown2.Visible == false)
-                    numericUpDown2.Show();
-                else
-                    numericUpDown2.Hide();
-                if (trackBar1.Visible == false)
-                    trackBar1.Show();
-                else
-                    trackBar1.Hide();
-                if (label2.Visible == false)
-                    label2.Show();
-                else
-                    label2.Hide();
-                if (textBox1.Visible == false)
-                    textBox1.Show();
-                else
-                    textBox1.Hide();
-                if (label1.Visible == false)
-                    label1.Show();
-                else
-                    label1.Hide();
-                if (richTextBox3.Visible == false)
-                    richTextBox3.Show();
-                else
-                    richTextBox3.Hide();
-                richTextBoxAccz.Hide();
-                richTextBox2.Hide();
-
+        {    
             Properties.Settings.Default["Loop"] = numericUpDownLoop.Value;
             Properties.Settings.Default["ChangeAcc"] = numericUpDown3.Value;
             Properties.Settings.Default["CountPict"] = numericUpDown4.Value;
@@ -1046,31 +854,6 @@ namespace WindowsFormsApplication1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            numericUpDownLoop.Hide();
-            labelLoop.Hide();
-            numericUpDown4.Hide();
-            label9.Hide();
-            label8.Hide();
-            richTextBox1.Hide();
-            numericUpDown3.Hide();
-            checkBox2.Hide();
-            label7.Hide();
-            labelkey.Hide();
-            richTextBoxGroups.Hide();
-                checkBox1.Hide();
-                label5.Hide();
-                label6.Hide();
-                richTextBoxText.Hide();
-                button6.Hide();
-                richTextBox3.Hide();
-                richTextBox4.Hide();
-
-                button1.Show();
-                button2.Show();
-                button3.Show();
-                button4.Show();
-                button5.Show();
-
             Properties.Settings.Default["Loop"] = numericUpDownLoop.Value;
             Properties.Settings.Default["ChangeAcc"] = numericUpDown3.Value;
             Properties.Settings.Default["CountPict"] = numericUpDown4.Value;
