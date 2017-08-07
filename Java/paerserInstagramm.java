@@ -151,7 +151,7 @@ public class parser{
 				System.out.println("Аккаунт: " + cUser + " подписан не на все аккаунты из списка.");
 			}	
 	}
-		System.out.println("\nИтог:\n\tВсего аккаунтов: " + (lines.length - 1) + ".\n\tПодписанные: " + yes + ".\n\tНе подписанные: " + no + ".");
+		System.out.println("\nИтог:\n\tВсего аккаунтов: " + (lines.length - 1) + ".\n\tПодписанные: " + yes + ".\n\tНеподписанные: " + no + ".");
 		}catch(Throwable throwa){
 			System.out.println(throwa.toString());
 		}
