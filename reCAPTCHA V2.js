@@ -4,7 +4,6 @@
  var n 		= '\n';
  var chk 	= false; 
  var sec        = 10;
- var dataSite   = '6LcU4gkTAAAAAM4SyYTmXlKvqwWLuaFLy-30rzBn';
  var domen 	= 'textnow.com';
  var k          = '6LcU4gkTAAAAAM4SyYTmXlKvqwWLuaFLy-30rzBn';
 
