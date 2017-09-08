@@ -1,22 +1,23 @@
 
- var myKey      = '';  // API-Ключ от рукапчи.   
+ var myKey  = '';  // API-Ключ от рукапчи.   
  
  var n 		= '\n';
  var chk 	= false; 
- var sec        = 10;
- var domen 	= 'textnow.com';
- var k          = '6LcU4gkTAAAAAM4SyYTmXlKvqwWLuaFLy-30rzBn';
+ var sec    = 10;
+
 
 function captcha(myKey){
 	 
-	 var first;
-	  
+	var k     = window.document.querySelector('iframe[sandbox="allow-forms  allow-same-origin allow-scripts allow-top-navigation"]').getAttribute('src').split('k=')[1].split('&')[0];
+	var domen = window.location.host;
+	
+    var first;
 		first  = 'CODE:SET !ERRORIGNORE YES' + n;
                 first += 'TAB OPEN' + n; 
 		first += 'TAB T=2';
           
 		iimPlay(first, 60);  
-
+			
 		var linkA = 'URL GOTO=rucaptcha.com/in.php?key='+myKey+'&method=userrecaptcha&googlekey='+k+'&pageurl='+domen;
 		
 		iimPlayCode(linkA);
@@ -72,3 +73,5 @@ function captcha(myKey){
 	  }
 		
   }	
+  
+  captcha(myKey);
