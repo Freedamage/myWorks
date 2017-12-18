@@ -1,6 +1,6 @@
 var mail = 'DASDA';
 var num = '0';
-var wallet =  'R425299709692';
+var wallet =  '';
 var minsum = 50;
 var frstW = 7;
 var timeis = 5;
